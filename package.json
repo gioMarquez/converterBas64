@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "file-type": "^16.5.4",
     "mime-types": "^2.1.35",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@types/mime-types": "^2.1.4",

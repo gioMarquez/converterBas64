@@ -27,6 +27,13 @@ const FileToBase64Converter: React.FC = () => {
     }
   };
 
+  const handleOpenInNewTab = () => {
+    if (base64 && file) {
+      const fileUrl = `data:application/octet-stream;base64,${base64}`;
+      window.open(fileUrl, '_blank');
+    }
+  };
+
   return (
     <div className="p-5 space-y-5">
       <label
@@ -53,16 +60,19 @@ const FileToBase64Converter: React.FC = () => {
         />
       </label>
       <button onClick={handleConvert} className="bg-blue-300 px-6 rounded-lg py-1">
-        Convert to Base64
+        Convertir a Base64
       </button>
       {base64 && (
         <div>
-          <h3>Base 64 Output</h3>
+          <h3>Salida Base 64</h3>
           <textarea
             className="bg-red-500 text-white w-full h-[300px] rounded-md"
             value={base64}
             readOnly
           ></textarea>
+          <button onClick={handleOpenInNewTab} className="bg-green-300 px-6 rounded-lg py-1 mt-2">
+            Ver más información
+          </button>
         </div>
       )}
     </div>

@@ -1,8 +1,8 @@
-import CardViewer from "./components/CardViewer/CardViewer"
+import RouterComponent from './router/router';
 
 const App = () => {
   return (
-    <CardViewer />
+    <RouterComponent />
   )
 }
 
